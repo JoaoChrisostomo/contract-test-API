@@ -2,9 +2,9 @@ import faker from 'faker'
 
 export class Factory{
     
-    static postUsuario(type, admin = true){
-        switch(type){
-            case 'valido':
+    static getUser(type, admin = true){
+        switch (type){
+            case 'valid':
                 return {
                     "nome": faker.name.findName(),
                     "email": faker.internet.email(),
@@ -12,7 +12,7 @@ export class Factory{
                     "administrador": admin.toString()
                 }
                 
-            case 'invalido':
+            case 'invalid':
                 return {
                     "nome": "Fulano da Silva",
                     "email": "beltrano@qa.com.br",
@@ -20,30 +20,17 @@ export class Factory{
                     "administrador": "true"
                 }
 
-            case 'vazio':
+            case 'empty':
                 return {
                     "nome": "",
                     "email": "",
                     "password": "",
                     "administrador": admin.toString()
-                }
+                
             
-            case 'novo_usuario':
-                return {
-                    "nome": faker.name.findName(),
-                    "email": faker.internet.email(),
-                    "password": faker.internet.password(),
-                    "administrador": admin.toString()
                 }
+                default:
+                    return {notfound:"The user type was not found, please verify!" }         
         }
     }
-
-    static updateUsuario(admin = true){
-        return {
-            "nome": faker.name.findName(),
-            "email": faker.internet.email(),
-            "password": faker.internet.password(),
-            "administrador": admin.toString()
-        }
-    }
-}
+}   

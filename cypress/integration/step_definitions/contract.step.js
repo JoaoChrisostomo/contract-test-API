@@ -15,13 +15,6 @@ When(`post the user of type {string}`, (user_type) => {
 });
 
 Then(`must be responsed the schema {string} with status {int}`, (schema, status) => {
-	/**
-     * The parameter status is the name of json file that keep the schema of that request.
-     * The parameter schema is the folder where my schema must be stored.
-     * For example: get-user/200.json || post-user/400.json
-     * 
-     */
-
 	 cy.get('@Response').then( res => {
         cy.contractValidation( res, schema, status).then( valid => {
             expect(valid).to.be.true

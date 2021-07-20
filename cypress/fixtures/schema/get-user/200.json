@@ -8,8 +8,7 @@
     ],
     "properties": {
         "quantidade": {
-            "type": "integer",
-            "default": 0
+            "type": "integer"
         },
         "usuarios": {
             "type": "array",
@@ -17,7 +16,6 @@
             "additionalItems": true,
             "items": {
                 "type": "object",
-                "default": {},
                 "required": [
                     "nome",
                     "email",
@@ -27,24 +25,24 @@
                 ],
                 "properties": {
                     "nome": {
-                        "type": "string",
-                        "default": ""
+                        "type": "string"
+                        
                     },
                     "email": {
-                        "type": "string",
-                        "default": ""
+                        "type": "string"
+                        
                     },
                     "password": {
-                        "type": "string",
-                        "default": ""
+                        "type": "string"
+                        
                     },
                     "administrador": {
-                        "type": "string",
-                        "default": ""
+                        "type": "string"
+                        
                     },
                     "_id": {
-                        "type": "string",
-                        "default": ""
+                        "type": "string"
+                        
                     }
                 },
                 "additionalProperties": true
