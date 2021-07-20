@@ -22,7 +22,7 @@
             "name": "request all the users from /usuarios",
             "result": {
               "status": "passed",
-              "duration": 310000000
+              "duration": 381000000
             }
           },
           {
@@ -32,7 +32,7 @@
             "name": "must be responsed the schema \"get-user\" with status 200",
             "result": {
               "status": "passed",
-              "duration": 59000000
+              "duration": 78000000
             }
           }
         ]
@@ -52,7 +52,7 @@
             "name": "post the user of type \"invalid\"",
             "result": {
               "status": "passed",
-              "duration": 94000000
+              "duration": 106000000
             }
           },
           {
@@ -62,7 +62,7 @@
             "name": "must be responsed the schema \"post-user\" with status 400",
             "result": {
               "status": "passed",
-              "duration": 16000000
+              "duration": 33000000
             }
           }
         ]
@@ -82,7 +82,7 @@
             "name": "post the user of type \"valid\"",
             "result": {
               "status": "passed",
-              "duration": 69000000
+              "duration": 345000000
             }
           },
           {
@@ -92,7 +92,7 @@
             "name": "must be responsed the schema \"post-user\" with status 201",
             "result": {
               "status": "passed",
-              "duration": 22000000
+              "duration": 100000000
             }
           }
         ]

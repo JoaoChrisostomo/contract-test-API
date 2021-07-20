@@ -1,9 +1,11 @@
 {
+ "$schema": "https://on.cypress.io/cypress.schema.json",
  "video": false,
  "videoportWidth": 1520,
  "viewportHeight": 880,
  "chromeWebSecurity": false,
- "numTestsKeptInMemory": 1,
+ "numTestsKeptInMemory": 5,
  "ignoreTestFiles": "*.js",
- "testFiles": "**/*.{feature,features}"  
+ "testFiles": "**/*.{feature,features}", 
+ "screenshotsFolder": "report/screenshot"
 }

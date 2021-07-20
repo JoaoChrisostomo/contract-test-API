@@ -6,8 +6,10 @@
   "scripts": {
     "cy:open": "cypress open",
     "cy:run": "cypress run",
-    "cy:report": "node ./cypress/support/report.js",
+    "cy:report": "node ./cypress/support/reporter.js",
+    "cy:clear": "node ./cypress/support/clear.js",
     "test": "echo \"Error: no test specified\" && exit 1"
+
   },
   "keywords": [],
   "author": "",
