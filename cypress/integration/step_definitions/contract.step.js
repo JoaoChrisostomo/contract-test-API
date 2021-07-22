@@ -1,5 +1,5 @@
 /// <reference types="cypress" />
-import {When, Then, Given, And, But, Before} from 'cypress-cucumber-preprocessor/steps'
+import {When, Then, Given, And, But, Before} from 'cypress-cucumber-preprocessor/step'
 import { ServeRest } from '../../services/serverest.service';
 
 When(`request all the users from /usuarios`, () => {

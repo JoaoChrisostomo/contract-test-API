@@ -2,6 +2,7 @@ import Rest from './common/_rest.service'
 import {Factory} from '../fixtures/factory.js'
 
 const URL_USERS = '/usuarios'
+const URL_LOGIN = '/login'
 
 
 export class ServeRest extends Rest {

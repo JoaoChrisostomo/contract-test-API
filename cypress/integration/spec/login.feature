@@ -6,7 +6,7 @@ Feature: login teste com json-schema
 
     Scenario Outline: consultar login com senha válida e inválida na API serverest
         When logar com usuario do tipo "<type>"
-        Then deve ser retornado o schema "post-login" com  <status>
+        Then deve ser retornado o schema "post-login" com status <status>
         Examples:
             | type         | status |
             | invalid      | 400    |
