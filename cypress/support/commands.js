@@ -27,7 +27,7 @@
 import Ajv from 'ajv'
 const ajv = new Ajv({allErrors: true, verbose: true, strict: false })
 
-Cypress.Commands.add('contractValidation', (res, schema, status) => {
+Cypress.Commands.add('contractValidation', 'loginValidation', (res, schema, status) => {
     cy.fixture(`schema/${schema}/${status}.json`).then( schema =>{
         const validate = ajv.compile(schema)
         const valid = validate(res.body)
