@@ -501,7 +501,7 @@ table.dataTable.dtr-inline.collapsed > tbody > tr.parent > td:first-child:before
                 </a>
             </div>
             <p class="navbar-text">Feature:
-                <small>Contract test with json-schema</small>
+                <small>contrato de Usuário</small>
             </p>
         </div>
     </nav>
@@ -516,7 +516,7 @@ table.dataTable.dtr-inline.collapsed > tbody > tr.parent > td:first-child:before
                 
             </div>
             <h1>Feature:
-                <small>Contract test with json-schema</small>
+                <small>contrato de Usuário</small>
             </h1>
             <p></p>
         </div>
@@ -555,7 +555,7 @@ table.dataTable.dtr-inline.collapsed > tbody > tr.parent > td:first-child:before
         <tr>
             <td class="chart">
                 <canvas id="scenario-chart"></canvas>
-                <div class="total">3</div>
+                <div class="total">6</div>
             </td>
             <td>
                 <table class="tile_info">
@@ -566,7 +566,7 @@ table.dataTable.dtr-inline.collapsed > tbody > tr.parent > td:first-child:before
                                 Passed
                             </p>
                         </td>
-                        <td class="percentage">100.00 %</td>
+                        <td class="percentage">66.67 %</td>
                     </tr>
                     <tr>
                         <td>
@@ -577,6 +577,16 @@ table.dataTable.dtr-inline.collapsed > tbody > tr.parent > td:first-child:before
                         </td>
                         <td class="percentage">0.00 %</td>
                     
+                    
+                    <tr>
+                        <td>
+                            <p data-toggle="tooltip" data-placement="left" title="Scenario has no step implmentation.">
+                                <i class="fa fa-question-circle not-defined-color"></i>
+                                Not defined
+                            </p>
+                        </td>
+                        <td class="percentage">33.33 %</td>
+                    </tr>
                     
                     </tr>
                     
@@ -677,7 +687,7 @@ table.dataTable.dtr-inline.collapsed > tbody > tr.parent > td:first-child:before
                     
                 </div>
 
-                <h2>Scenario: <small>: Requesting from serverest api and validating contract</small></h2>
+                <h2>Scenario: <small>Requisitar todos os usuários cadastrados</small></h2>
 
                 <ul class="nav navbar-right panel_toolbox">
                     <li>
@@ -724,7 +734,7 @@ table.dataTable.dtr-inline.collapsed > tbody > tr.parent > td:first-child:before
                                     <span class="keyword highlight">When </span>
 
                                     
-                                        request all the users from /usuarios
+                                        fazer uma requisição de /usuarios
                                         
                                     
 
@@ -782,7 +792,7 @@ table.dataTable.dtr-inline.collapsed > tbody > tr.parent > td:first-child:before
                                     <span class="keyword highlight">Then </span>
 
                                     
-                                        must be responsed the schema "get-user" with status 200
+                                        deverá ser retornado o schema "get-user" com o status 200
                                         
                                     
 
@@ -840,7 +850,7 @@ table.dataTable.dtr-inline.collapsed > tbody > tr.parent > td:first-child:before
                     
                 </div>
 
-                <h2>Scenario: <small>Posting users on serverest API and validating Contract</small></h2>
+                <h2>Scenario: <small>Cadastrar um novo usuário</small></h2>
 
                 <ul class="nav navbar-right panel_toolbox">
                     <li>
@@ -887,7 +897,7 @@ table.dataTable.dtr-inline.collapsed > tbody > tr.parent > td:first-child:before
                                     <span class="keyword highlight">When </span>
 
                                     
-                                        post the user of type "invalid"
+                                        realizar o cadastro do usuário do tipo "valid"
                                         
                                     
 
@@ -945,7 +955,7 @@ table.dataTable.dtr-inline.collapsed > tbody > tr.parent > td:first-child:before
                                     <span class="keyword highlight">Then </span>
 
                                     
-                                        must be responsed the schema "post-user" with status 400
+                                        deverá ser retornado o schema "post-user" com o status 201
                                         
                                     
 
@@ -1003,7 +1013,7 @@ table.dataTable.dtr-inline.collapsed > tbody > tr.parent > td:first-child:before
                     
                 </div>
 
-                <h2>Scenario: <small>Posting users on serverest API and validating Contract</small></h2>
+                <h2>Scenario: <small>Cadastrar um novo usuário</small></h2>
 
                 <ul class="nav navbar-right panel_toolbox">
                     <li>
@@ -1050,7 +1060,7 @@ table.dataTable.dtr-inline.collapsed > tbody > tr.parent > td:first-child:before
                                     <span class="keyword highlight">When </span>
 
                                     
-                                        post the user of type "valid"
+                                        realizar o cadastro do usuário do tipo "invalid"
                                         
                                     
 
@@ -1108,7 +1118,590 @@ table.dataTable.dtr-inline.collapsed > tbody > tr.parent > td:first-child:before
                                     <span class="keyword highlight">Then </span>
 
                                     
-                                        must be responsed the schema "post-user" with status 201
+                                        deverá ser retornado o schema "post-user" com o status 400
+                                        
+                                    
+
+                                    
+
+                                </div>
+
+                                
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                
+                            </div>
+
+                        
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+                        
+
+                        
+                            
+                        
+
+                    
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="x_panel" style="height: auto;">
+            <div class="x_title">
+
+                <div class="tags">
+                    
+                        
+                        
+                    
+                </div>
+
+                <h2>Scenario: <small>Editar usuário cadastrado</small></h2>
+
+                <ul class="nav navbar-right panel_toolbox">
+                    <li>
+                        <a class="collapse-link"><i class="fa fa-chevron-down"></i></a>
+                    </li>
+
+                    
+
+                    
+
+                    
+                        <li>
+                            <span class="step skipped-background" data-toggle="tooltip" title="Scenario is skipped">1</span>
+                        </li>
+                    
+
+                    
+
+                    
+
+                    
+                        <li>
+                            <span class="step not-defined-background" data-toggle="tooltip" title="Scenario has nop step implementation.">1</span>
+                        </li>
+                    
+
+                    
+                </ul>
+
+                <div class="clearfix"></div>
+            </div>
+
+            <div class="x_content" style="display: none;">
+                <div class="scenario-step-container"></div>
+                    
+                        
+                            <div class="scenario-step-container">
+
+                                
+                                    
+                                        <div class="label" data-toggle="tooltip" data-placement="top" title="Step has no implementation.">
+                                            <i class="fa fa-question-circle fa-2x not-defined-color"></i>
+                                        </div>
+                                    
+                                
+
+                                <div class="text">
+                                    <span class="keyword highlight">When </span>
+
+                                    
+                                        editar o usuário de id "eefr0Uh0El05GZrs" do tipo "valid"
+                                        
+                                    
+
+                                    
+
+                                </div>
+
+                                
+                                    
+                                        <pre class="info">
+// With Callbacks
+When (/^editar o usuário de id "([^"]*)" do tipo "([^"]*)"$/, (arg1, arg2, callback) => {
+    // Write code here that turns the phrase above into concrete actions
+    callback(null, 'pending');
+});
+
+// With Promises
+When (/^editar o usuário de id "([^"]*)" do tipo "([^"]*)"$/, (arg1, arg2, ) => {
+    // Write code here that turns the phrase above into concrete actions
+    return Promise.resolve('pending');
+});
+                                        </pre>
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                
+                            </div>
+
+                        
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+                        
+
+                        
+                            
+                        
+
+                    
+                
+                        
+                            <div class="scenario-step-container">
+
+                                
+                                    
+                                        <div class="label" data-toggle="tooltip" data-placement="top" title="Step is skipped">
+                                            <i class="fa fa-arrow-circle-right fa-2x skipped-color"></i>
+                                        </div>
+                                    
+                                
+
+                                <div class="text">
+                                    <span class="keyword highlight">Then </span>
+
+                                    
+                                        deverá ser retornado o schema "put-user" com o status 200
+                                        
+                                    
+
+                                    
+
+                                </div>
+
+                                
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                
+                            </div>
+
+                        
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+                        
+
+                        
+                            
+                        
+
+                    
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="x_panel" style="height: auto;">
+            <div class="x_title">
+
+                <div class="tags">
+                    
+                        
+                        
+                    
+                </div>
+
+                <h2>Scenario: <small>Editar usuário cadastrado</small></h2>
+
+                <ul class="nav navbar-right panel_toolbox">
+                    <li>
+                        <a class="collapse-link"><i class="fa fa-chevron-down"></i></a>
+                    </li>
+
+                    
+
+                    
+
+                    
+                        <li>
+                            <span class="step skipped-background" data-toggle="tooltip" title="Scenario is skipped">1</span>
+                        </li>
+                    
+
+                    
+
+                    
+
+                    
+                        <li>
+                            <span class="step not-defined-background" data-toggle="tooltip" title="Scenario has nop step implementation.">1</span>
+                        </li>
+                    
+
+                    
+                </ul>
+
+                <div class="clearfix"></div>
+            </div>
+
+            <div class="x_content" style="display: none;">
+                <div class="scenario-step-container"></div>
+                    
+                        
+                            <div class="scenario-step-container">
+
+                                
+                                    
+                                        <div class="label" data-toggle="tooltip" data-placement="top" title="Step has no implementation.">
+                                            <i class="fa fa-question-circle fa-2x not-defined-color"></i>
+                                        </div>
+                                    
+                                
+
+                                <div class="text">
+                                    <span class="keyword highlight">When </span>
+
+                                    
+                                        editar o usuário de id "0000000000000000" do tipo "invalid"
+                                        
+                                    
+
+                                    
+
+                                </div>
+
+                                
+                                    
+                                        <pre class="info">
+// With Callbacks
+When (/^editar o usuário de id "([^"]*)" do tipo "([^"]*)"$/, (arg1, arg2, callback) => {
+    // Write code here that turns the phrase above into concrete actions
+    callback(null, 'pending');
+});
+
+// With Promises
+When (/^editar o usuário de id "([^"]*)" do tipo "([^"]*)"$/, (arg1, arg2, ) => {
+    // Write code here that turns the phrase above into concrete actions
+    return Promise.resolve('pending');
+});
+                                        </pre>
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                
+                            </div>
+
+                        
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+                        
+
+                        
+                            
+                        
+
+                    
+                
+                        
+                            <div class="scenario-step-container">
+
+                                
+                                    
+                                        <div class="label" data-toggle="tooltip" data-placement="top" title="Step is skipped">
+                                            <i class="fa fa-arrow-circle-right fa-2x skipped-color"></i>
+                                        </div>
+                                    
+                                
+
+                                <div class="text">
+                                    <span class="keyword highlight">Then </span>
+
+                                    
+                                        deverá ser retornado o schema "put-user" com o status 400
+                                        
+                                    
+
+                                    
+
+                                </div>
+
+                                
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                
+                            </div>
+
+                        
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+                        
+
+                        
+                            
+                        
+
+                    
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="x_panel" style="height: auto;">
+            <div class="x_title">
+
+                <div class="tags">
+                    
+                        
+                        
+                    
+                </div>
+
+                <h2>Scenario: <small>Deletar usuário cadastrado</small></h2>
+
+                <ul class="nav navbar-right panel_toolbox">
+                    <li>
+                        <a class="collapse-link"><i class="fa fa-chevron-down"></i></a>
+                    </li>
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+                        <li>
+                            <span class="step passed-background" data-toggle="tooltip" title="Scenario passed">3</span>
+                        </li>
+                    
+
+                    
+
+                    
+                </ul>
+
+                <div class="clearfix"></div>
+            </div>
+
+            <div class="x_content" style="display: none;">
+                <div class="scenario-step-container"></div>
+                    
+                        
+                            <div class="scenario-step-container">
+
+                                
+                                    
+                                        <div class="label" title="Success">
+                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
+                                        </div>
+                                    
+                                
+
+                                <div class="text">
+                                    <span class="keyword highlight">Given </span>
+
+                                    
+                                        que o usuário não tenha um carrinho cadastrado
+                                        
+                                    
+
+                                    
+
+                                </div>
+
+                                
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                
+                            </div>
+
+                        
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+                        
+
+                        
+                            
+                        
+
+                    
+                
+                        
+                            <div class="scenario-step-container">
+
+                                
+                                    
+                                        <div class="label" title="Success">
+                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
+                                        </div>
+                                    
+                                
+
+                                <div class="text">
+                                    <span class="keyword highlight">When </span>
+
+                                    
+                                        deletar o usuário de id "lhaM76xSBLJbBeXw"
+                                        
+                                    
+
+                                    
+
+                                </div>
+
+                                
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                
+                            </div>
+
+                        
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+                        
+
+                        
+                            
+                        
+
+                    
+                
+                        
+                            <div class="scenario-step-container">
+
+                                
+                                    
+                                        <div class="label" title="Success">
+                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
+                                        </div>
+                                    
+                                
+
+                                <div class="text">
+                                    <span class="keyword highlight">Then </span>
+
+                                    
+                                        deverá ser retornado o schema "delet-usuarios" com o status 200
                                         
                                     
 
@@ -1198,12 +1791,12 @@ table.dataTable.dtr-inline.collapsed > tbody > tr.parent > td:first-child:before
                     ],
                     datasets: [{
                         data: [
-                            3,
+                            4,
                             0,
                             0,
                             0,
                             0,
-                            0
+                            2
                         ],
                         backgroundColor: [
                             "#26B99A",

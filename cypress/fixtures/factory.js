@@ -68,8 +68,8 @@ export class Factory{
                 }
             case 'valid':
                 return {
-                    "nome": "Valerie alteracao2",
-                    "email": "Lelah_Nikolaus@hotmail.com",
+                    "nome": "Peters one",
+                    "email": "Peters_Jiks@hotmail.com",
                     "password": "teste",
                     "administrador": "true"
                   }

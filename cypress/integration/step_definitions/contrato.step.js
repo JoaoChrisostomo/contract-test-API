@@ -55,7 +55,7 @@ Given(`que o usuário não tenha um carrinho cadastrado`, () => {
 });
 
 When(`deletar o usuário de id {string}`, (_id) => {
-    ServeRest.del_user(_id).then(del_user_response => {
+    ServeRest.deletar_user(_id).then(del_user_response => {
         cy.wrap(del_user_response).as('Response')
     })
 });
