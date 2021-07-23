@@ -27,7 +27,7 @@
 import Ajv from 'ajv'
 const ajv = new Ajv({allErrors: true, verbose: true, strict: false })
 
-Cypress.Commands.add('contractValidation', 'loginValidation', (res, schema, status) => {
+Cypress.Commands.add('contractValidation', (res, schema, status) => {
     cy.fixture(`schema/${schema}/${status}.json`).then( schema =>{
         const validate = ajv.compile(schema)
         const valid = validate(res.body)
@@ -42,4 +42,9 @@ Cypress.Commands.add('contractValidation', 'loginValidation', (res, schema, stat
         }
         return true
     })
+})
+
+Cypress.Commands.add('StepNotImplemented', () => {
+    console.log("O step não foi implementado ainda");
+    cy.log("O step não foi implementado ainda")
 })

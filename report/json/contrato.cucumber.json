@@ -1,0 +1,197 @@
+[
+  {
+    "keyword": "Feature",
+    "name": "contrato de Usuário",
+    "line": 1,
+    "id": "contrato-de-usuário",
+    "tags": [],
+    "uri": "contrato.feature",
+    "elements": [
+      {
+        "id": "contrato-de-usuário;requisitar-todos-os-usuários-cadastrados",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "Requisitar todos os usuários cadastrados",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 4,
+            "name": "fazer uma requisição de /usuarios",
+            "result": {
+              "status": "passed",
+              "duration": 344000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 5,
+            "name": "deverá ser retornado o schema \"get-user\" com o status 200",
+            "result": {
+              "status": "passed",
+              "duration": 83000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "contrato-de-usuário;cadastrar-um-novo-usuário",
+        "keyword": "Scenario",
+        "line": 12,
+        "name": "Cadastrar um novo usuário",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 8,
+            "name": "realizar o cadastro do usuário do tipo \"valid\"",
+            "result": {
+              "status": "passed",
+              "duration": 90000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 9,
+            "name": "deverá ser retornado o schema \"post-user\" com o status 201",
+            "result": {
+              "status": "passed",
+              "duration": 29000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "contrato-de-usuário;cadastrar-um-novo-usuário",
+        "keyword": "Scenario",
+        "line": 13,
+        "name": "Cadastrar um novo usuário",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 8,
+            "name": "realizar o cadastro do usuário do tipo \"invalid\"",
+            "result": {
+              "status": "passed",
+              "duration": 84000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 9,
+            "name": "deverá ser retornado o schema \"post-user\" com o status 400",
+            "result": {
+              "status": "passed",
+              "duration": 25000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "contrato-de-usuário;editar-usuário-cadastrado",
+        "keyword": "Scenario",
+        "line": 20,
+        "name": "Editar usuário cadastrado",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 16,
+            "name": "editar o usuário de id \"eefr0Uh0El05GZrs\" do tipo \"valid\"",
+            "result": {
+              "status": "undefined"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 17,
+            "name": "deverá ser retornado o schema \"put-user\" com o status 200",
+            "result": {
+              "status": "skipped"
+            }
+          }
+        ]
+      },
+      {
+        "id": "contrato-de-usuário;editar-usuário-cadastrado",
+        "keyword": "Scenario",
+        "line": 21,
+        "name": "Editar usuário cadastrado",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 16,
+            "name": "editar o usuário de id \"0000000000000000\" do tipo \"invalid\"",
+            "result": {
+              "status": "undefined"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 17,
+            "name": "deverá ser retornado o schema \"put-user\" com o status 400",
+            "result": {
+              "status": "skipped"
+            }
+          }
+        ]
+      },
+      {
+        "id": "contrato-de-usuário;deletar-usuário-cadastrado",
+        "keyword": "Scenario",
+        "line": 29,
+        "name": "Deletar usuário cadastrado",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 24,
+            "name": "que o usuário não tenha um carrinho cadastrado",
+            "result": {
+              "status": "passed",
+              "duration": 132000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 25,
+            "name": "deletar o usuário de id \"lhaM76xSBLJbBeXw\"",
+            "result": {
+              "status": "failed",
+              "error_message": "TypeError: _serverest.ServeRest.del_user is not a function\n    at Context.eval (https://serverest.dev/__cypress/tests?p=cypress\\integration\\spec\\contrato.feature:214:24)\n    at Context.resolveAndRunStepDefinition (https://serverest.dev/__cypress/tests?p=cypress\\integration\\spec\\contrato.feature:10971:29)\n    at Context.eval (https://serverest.dev/__cypress/tests?p=cypress\\integration\\spec\\contrato.feature:10303:35)\nFrom previous event:\n    at Context.thenFn (https://serverest.dev/__cypress/runner/cypress_runner.js:137744:23)\n    at Context.then (https://serverest.dev/__cypress/runner/cypress_runner.js:138183:21)\n    at Context.<anonymous> (https://serverest.dev/__cypress/runner/cypress_runner.js:153308:21)\n    at https://serverest.dev/__cypress/runner/cypress_runner.js:152716:15\nFrom previous event:\n    at runCommand (https://serverest.dev/__cypress/runner/cypress_runner.js:152695:8)\n    at next (https://serverest.dev/__cypress/runner/cypress_runner.js:152841:14)\n    at https://serverest.dev/__cypress/runner/cypress_runner.js:152869:16\nFrom previous event:\n    at next (https://serverest.dev/__cypress/runner/cypress_runner.js:152841:34)\nFrom previous event:\n    at https://serverest.dev/__cypress/runner/cypress_runner.js:152882:37\nFrom previous event:\n    at run (https://serverest.dev/__cypress/runner/cypress_runner.js:152875:21)\n    at $Cy.cy.<computed> [as then] (https://serverest.dev/__cypress/runner/cypress_runner.js:153348:11)\n    at Context.runnable.fn (https://serverest.dev/__cypress/runner/cypress_runner.js:153572:21)\n    at callFn (https://serverest.dev/__cypress/runner/cypress_runner.js:109330:21)\n    at Test.../driver/node_modules/mocha/lib/runnable.js.Runnable.run (https://serverest.dev/__cypress/runner/cypress_runner.js:109317:7)\n    at https://serverest.dev/__cypress/runner/cypress_runner.js:159577:28\nFrom previous event:\n    at Object.onRunnableRun (https://serverest.dev/__cypress/runner/cypress_runner.js:159565:17)\n    at $Cypress.action (https://serverest.dev/__cypress/runner/cypress_runner.js:149656:28)\n    at Test.Runnable.run (https://serverest.dev/__cypress/runner/cypress_runner.js:157707:13)\n    at Runner.../driver/node_modules/mocha/lib/runner.js.Runner.runTest (https://serverest.dev/__cypress/runner/cypress_runner.js:109989:10)\n    at https://serverest.dev/__cypress/runner/cypress_runner.js:110115:12\n    at next (https://serverest.dev/__cypress/runner/cypress_runner.js:109898:14)\n    at https://serverest.dev/__cypress/runner/cypress_runner.js:109908:7\n    at next (https://serverest.dev/__cypress/runner/cypress_runner.js:109810:14)\n    at Hook.<anonymous> (https://serverest.dev/__cypress/runner/cypress_runner.js:109871:7)\n    at next (https://serverest.dev/__cypress/runner/cypress_runner.js:159493:22)\n    at https://serverest.dev/__cypress/runner/cypress_runner.js:159520:11\nFrom previous event:\n    at onNext (https://serverest.dev/__cypress/runner/cypress_runner.js:159517:57)\n    at done (https://serverest.dev/__cypress/runner/cypress_runner.js:109270:5)\n    at callFn (https://serverest.dev/__cypress/runner/cypress_runner.js:109353:7)\n    at Hook.../driver/node_modules/mocha/lib/runnable.js.Runnable.run (https://serverest.dev/__cypress/runner/cypress_runner.js:109317:7)\n    at https://serverest.dev/__cypress/runner/cypress_runner.js:159577:28\nFrom previous event:\n    at Object.onRunnableRun (https://serverest.dev/__cypress/runner/cypress_runner.js:159565:17)\n    at $Cypress.action (https://serverest.dev/__cypress/runner/cypress_runner.js:149656:28)\n    at Hook.Runnable.run (https://serverest.dev/__cypress/runner/cypress_runner.js:157707:13)\n    at next (https://serverest.dev/__cypress/runner/cypress_runner.js:109832:10)\n    at https://serverest.dev/__cypress/runner/cypress_runner.js:109876:5\n    at timeslice (https://serverest.dev/__cypress/runner/cypress_runner.js:103802:27)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 26,
+            "name": "deverá ser retornado o schema \"delet-usuarios\" com o status 200",
+            "result": {
+              "status": "skipped"
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -1,25 +1,17 @@
-/// <reference types="cypress" />
-import { When, Then, Given, And, But, Before } from 'cypress-cucumber-preprocessor/step'
-import  {ServeRest}  from '../../services/serverest.service';
+import {Given, When, Then, Before} from 'cypress-cucumber-preprocessor/steps'
+import {ServeRest} from '../../services/serverest.service'
 
-When(`solicitar dados para /login`, () => {
-    ServeRest.post_de_login().then(users => {
-        cy.wrap(users).as('Response')
-    })
-});
-    
-When(`logar com usuario do tipo {string}`, (user_type) => {
-	ServeRest.logar_usuario_do_tipo(user_type).then(post_login => {
-        cw.wrap(post_login).as('Response')
+When(`realizar login com um usuario do tipo {string}`, (login_type) => {
+	ServeRest.post_login_by_type(login_type).then(login_post_response => {
+        console.log(login_post_response)
+        cy.wrap(login_post_response).as('Response')
     })
 });
 
-Then(`deve ser retornado o schema {string} com  status {int}`, (schema, status) => {
-	cy.get('@Response').then( res => {
-        cy.loginValidation( res, schema, status).then( valid => {
-            expect(valid).to.be.true 
-    
-        }) 
+Then(`deverá ser retornado o schema {} com o status {int}`, (schema, status) => {
+    cy.get('@Response').then( res => {
+        cy.contractValidation( res, schema, status).then( valid => {
+            expect(valid).to.be.true
+        })
     })
 });
-
